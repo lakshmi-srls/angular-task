@@ -1,0 +1,32 @@
+<div class="row table-tool-bar">
+    <button class="app-btn" (click)="toggle()" >{{ btnString }}</button>
+</div>
+
+<div class="row table-tool-bar">
+    <p>Did you know?</p>
+    <p> 5% of users in Hyderabad Location have access to XYZ with no disadvantage to competitors.</p>
+</div>
+
+<p class="title">This includes users covered by:</p>
+
+<div class="example-table-container">
+
+    <table mat-table [dataSource]="userList" class="example-table"
+           matSort matSortActive="created" matSortDirection="desc">
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef> <b>Name</b></th>
+        <td mat-cell *matCellDef="let row">{{row?.name}}</td>
+      </ng-container>
+
+        <!-- ID Column -->
+      <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef> <b>Coverage</b> </th>
+          <td mat-cell *matCellDef="let row">{{row?.id}}</td>
+        </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+</div>

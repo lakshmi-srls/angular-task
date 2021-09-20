@@ -1,0 +1,51 @@
+.example-container {
+    position: relative;
+  }
+  
+  .example-table-container {
+    position: relative;
+    min-height: 200px;
+    max-height: 300px;
+    overflow: auto;
+    margin:  0px 20px;
+  }
+  
+  table {
+    width: 100%;
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .row.table-tool-bar p{
+      width: 100%;
+      text-align: left;
+      margin: 0px;
+      padding: 3px;
+  }
+   p.title{
+    margin: 10px;
+    padding: 0px 10px;
+  }
+
+  .table-tool-bar{
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    align-items: center;
+  }
+
+  .app-btn{
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    margin: 0px;
+    min-width: 12%;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    background: orange;
+    background-image: linear-gradient(to left, #1780b7,#1ebed9);
+  }

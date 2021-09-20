@@ -1,0 +1,19 @@
+.mat-list-base .mat-list-item {
+    color: #b6e5ff;
+    height: 75px;
+    font-size: 11px;
+}
+
+:host ::ng-deep .mat-list-base .mat-list-item .mat-list-item-content {
+    flex-direction: column;
+    padding: 14px 12px;
+}
+
+:host ::ng-deep .mat-list-option:hover,
+:host ::ng-deep .mat-list-option:focus,
+:host ::ng-deep .mat-nav-list .mat-list-item:hover,
+:host ::ng-deep .mat-nav-list .mat-list-item:focus,
+:host ::ng-deep .mat-action-list .mat-list-item:hover,
+:host ::ng-deep .mat-action-list .mat-list-item:focus {
+    background: #b6e5ff26;
+}
