@@ -1,0 +1,42 @@
+<div class="graph-block">
+    <div class="form-block">
+        <form [formGroup]="costTrackerForm" (ngSubmit)="addItem()">
+                <mat-form-field appearance="outline">
+                    <mat-label>Title</mat-label>
+                    <input type="text" matInput formControlName="title">
+                    <mat-error *ngIf="costTrackerFormValidate?.title?.errors?.required">
+                        This field is required.
+                    </mat-error>
+                    
+                </mat-form-field>
+                <br>
+                <mat-form-field appearance="outline">
+                    <mat-label>Amount</mat-label>
+                    <input matInput placeholder="Amount"  formControlName="amount">
+                    <mat-error *ngIf="costTrackerFormValidate?.amount?.errors?.required">This field is required.</mat-error>
+                </mat-form-field>
+                <br>
+                <mat-form-field appearance="outline">
+                    <mat-label>Date</mat-label>
+                    <input matInput placeholder="date"  formControlName="date">
+                    <mat-error *ngIf="costTrackerFormValidate?.date?.errors?.required">This field is required.</mat-error>
+                </mat-form-field>
+                <br>
+                <div class="form-footer">
+                    <button type="submit" class="btn-int-blue" mat-raised-button color="primary">Add </button><br>
+                </div>
+
+        </form>
+    </div>
+
+    <div class="form-details">
+        <div class="wrapper"  *ngFor="let costTracker of costTrackerList;let index;">
+            {{ costTracker | json }}
+            <div class="line-1"> {{ costTracker?.title }}</div>
+            <div class="line-2"></div>
+            <div class="line-3"></div>
+            <div class="line-4"></div>
+            <div class="line-5"></div>
+        </div>
+    </div>
+</div>

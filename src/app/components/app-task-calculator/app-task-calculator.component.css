@@ -1,0 +1,45 @@
+.app-block{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.app-block-left,
+.app-block-right{
+    width: 50%;
+}
+
+.app-block-left{
+    text-align: center;
+}
+
+form{
+    display: flex;
+    width: 100%;
+}
+
+form .icon{
+    display: block;
+    padding: 5PX;
+    MARGIN: 5PX;
+    color:orange;
+}
+
+.result {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+.mat-stroked-button{
+    margin-left: 360px;
+    border: 2px solid orangered;
+    border-radius: 30px;
+}
+.raised{
+margin-left: 30px;
+border-radius: 30px;
+}
+.cal{
+    margin: 50px;
+}

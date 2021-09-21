@@ -5,11 +5,13 @@ import {PageNotFoundComponent } from './core/page-not-found/page-not-found.compo
  
 import { AppTaskTableComponent } from './components/app-task-table/app-task-table.component';
 import { AppTaskCalculatorComponent } from './components/app-task-calculator/app-task-calculator.component';
+import { AppTaskGraphComponent } from './components/app-task-graph/app-task-graph.component';
 
 const routes: Routes = [
   { path: '',redirectTo:'app-task-table',pathMatch:'full'},
   { path: 'app-task-table', component:AppTaskTableComponent },
   { path: 'app-task-calculator', component: AppTaskCalculatorComponent },
+  { path: 'app-task-graph', component: AppTaskGraphComponent },
   { path: '**', component: PageNotFoundComponent }
 ];
 

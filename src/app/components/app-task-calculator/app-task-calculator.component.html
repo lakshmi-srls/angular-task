@@ -1,1 +1,49 @@
-<p>app-task-calculator works!</p>
+<div class="cal">
+    <button mat-stroked-button color="warn">Medical and pharamcy</button>
+    <button mat-raised-button color="warn" class="raised">estimate cost</button>
+</div>
+<div class="app-block">
+    <form [formGroup]="calculationForm" (ngSubmit)="getResult()">
+    <div class="app-block-left">
+            <mat-form-field appearance="outline">
+                <input type="text" matInput formControlName="input_1">
+                <mat-error *ngIf="calculationFormValidate?.input_1?.errors?.required">
+                    This field is required.
+                </mat-error>
+                <mat-error *ngIf="calculationFormValidate?.input_1?.errors?.pattern">
+                    Enter only number.
+                </mat-error>
+            </mat-form-field>
+            <br>
+            <span class="icon">X</span>
+            <mat-form-field appearance="outline">
+                <input matInput   formControlName="input_2">
+                <mat-error *ngIf="calculationFormValidate?.input_2?.errors?.required">This field is required.</mat-error>
+                <mat-error *ngIf="calculationFormValidate?.input_2?.errors?.pattern">Enter only number.</mat-error>
+            </mat-form-field>
+            <br>
+            <span class="icon">X</span>
+            <mat-form-field appearance="outline">
+                <span matPrefix>$ &nbsp;</span>
+                <input matInput  formControlName="input_3">
+                <mat-error *ngIf="calculationFormValidate?.input_3?.errors?.required">This field is required.</mat-error>
+                <mat-error *ngIf="calculationFormValidate?.input_3?.errors?.pattern">Enter only number.</mat-error>
+            </mat-form-field>
+            <br>
+         
+
+        </div>
+        <div class="app-block-right">
+            <div class="result">
+                <div class="form-footer">
+                    <button type="submit" class="btn-int-blue" mat-raised-button color="primary">calculation </button><br>
+                </div>
+                <div>=</div>
+                <mat-form-field appearance="outline">
+                    <input matInput disabled
+                     value="{{ result }}">
+                </mat-form-field>
+            </div>
+        </div>
+    </form>
+</div>

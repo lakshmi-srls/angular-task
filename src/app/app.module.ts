@@ -14,6 +14,7 @@ import { AppTaskCalculatorComponent } from './components/app-task-calculator/app
 import { PageNotFoundComponent } from './core/page-not-found/page-not-found.component';
 
 import { UsersService } from './services/users.service';
+import { AppTaskGraphComponent } from './components/app-task-graph/app-task-graph.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { UsersService } from './services/users.service';
     SideNavComponent,
     AppTaskTableComponent,
     AppTaskCalculatorComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    AppTaskGraphComponent
   ],
   imports: [
     BrowserModule,
